@@ -1,0 +1,25 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: inherit;
+}
+
+img,
+video {
+  display: block;
+}
+
+html {
+  overflow: -moz-scrollbars-none; /* Disable scrollbars in Firefox */
+  scrollbar-width: none; /* For newer versions of Firefox */
+}
+
+body {
+  background-color: black;
+  font-family: Ubuntu;
+  font-size: 16px;
+}
