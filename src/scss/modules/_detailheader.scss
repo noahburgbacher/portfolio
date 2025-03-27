@@ -1,0 +1,49 @@
+.detailheader-container {
+  width: 100vw;
+  background: linear-gradient(180deg, #000 65.5%, rgba(0, 0, 0, 0) 100%);
+  z-index: 50;
+  padding: 40px;
+  position: relative;
+  h1 {
+    color: #bf8a3c;
+
+    /* Title */
+    font-family: Play;
+    font-size: 80px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+  }
+}
+.detailheader-space {
+  height: 20vh;
+}
+
+.detailheader-nameyearlogos {
+  display: flex;
+  gap: 6px;
+  color: #bf8a3c;
+  align-items: center;
+
+  /* subtitle */
+  font-family: Ubuntu;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 300;
+}
+
+.detailheader-heading {
+  position: relative;
+  overflow: hidden;
+}
+
+.detailheader-link {
+  color: #bf8a3c;
+  /* medium big */
+  font-family: Ubuntu;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+  text-decoration: none;
+}

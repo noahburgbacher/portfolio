@@ -27,18 +27,33 @@ document.getElementById("video1").addEventListener("loadedmetadata", () => {
   syncVideos();
 });
 
+// document height
+function updateCSSVariable() {
+  const totalHeight = document.body.scrollHeight;
+  document.documentElement.style.setProperty(
+    "--total-height",
+    `${totalHeight}px`
+  );
+}
+
+// Initial update
+updateCSSVariable();
+
+// Update on window resize
+window.addEventListener("resize", updateCSSVariable);
+
 // Fix firefox
 
 if (navigator.userAgent.includes("Firefox")) {
   const brokenByFirefox = document.querySelectorAll(".firefox-broke-it");
   console.warn("Warning: This website might break when using Firefox.");
   brokenByFirefox.forEach((firefox) => {
-    firefox.classList.add("is-active");
+    firefox.classList.add("is-firefox");
   });
   const FirefoxWarning = document.querySelector(".warning-firefox");
   const closeFirefoxWarning = document.querySelector(".warning-firefox-close");
   closeFirefoxWarning.addEventListener("click", function () {
     // Remove the class 'is-active' from the element
-    FirefoxWarning.classList.remove("is-active");
+    FirefoxWarning.classList.remove("is-firefox");
   });
 }
