@@ -89,3 +89,9 @@
   mix-blend-mode: color;
   right: 0;
 }
+
+.header-background-particles {
+  mix-blend-mode: normal;
+  position: absolute;
+  filter: blur(3px);
+}
