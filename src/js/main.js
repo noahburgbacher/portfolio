@@ -8,7 +8,7 @@ function syncVideos() {
   const timeDifference1 = Math.abs(video1.currentTime - video2.currentTime);
   const timeDifference2 = Math.abs(video1.currentTime - video3.currentTime);
 
-  const syncThreshold = 0.1; // 100 milliseconds threshold
+  const syncThreshold = 0.05; // 50 milliseconds threshold
 
   if (timeDifference1 > syncThreshold || timeDifference2 > syncThreshold) {
     // Set the current time of all videos to the first video
@@ -56,6 +56,9 @@ if (navigator.userAgent.includes("Firefox")) {
     // Remove the class 'is-active' from the element
     FirefoxWarning.classList.remove("is-firefox");
   });
+  setTimeout(() => {
+    FirefoxWarning.classList.remove("is-firefox");
+  }, 10000);
 }
 
 // particles
@@ -67,6 +70,7 @@ canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 
 // Particle properties
+
 const particles = [];
 const particleCount = 500; // Adjust for more or less particles
 
@@ -109,12 +113,6 @@ function drawParticles() {
 }
 
 drawParticles();
-
-// Resize canvas on window resizes
-window.addEventListener("resize", () => {
-  canvas.width = window.innerWidth;
-  canvas.height = window.innerHeight;
-});
 
 // reload page when resized
 
