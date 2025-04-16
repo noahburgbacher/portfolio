@@ -121,3 +121,18 @@ window.addEventListener("resize", function () {
     location.reload();
   }, 200);
 });
+
+// lazy loading
+// const video = document.querySelector(".lazy-loaded");
+// var isLaunched = false;
+
+// window.addEventListener("scroll", () => {
+//   if (isLaunched === false) {
+//     const videoTop = video.getBoundingClientRect().top;
+//     if (videoTop < window.innerHeight) {
+//       const src = video.dataset.src;
+//       video.setAttribute("src", src);
+//       isLaunched = true;
+//     }
+//   }
+// });

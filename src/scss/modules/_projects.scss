@@ -4,4 +4,23 @@
     flex-direction: column;
     gap: 38px;
   }
+  background-image: linear-gradient(
+    300deg,
+    rgb(0, 0, 0) 0%,
+    rgb(27, 27, 27) 100%
+  );
+  padding-bottom: 50px;
+}
+
+.projects-title {
+  /* real-shadow */
+  text-shadow: 24px 48px 24px rgba(0, 0, 0, 0.25),
+    12px 24px 12px rgba(0, 0, 0, 0.5), 6px 12px 6px rgba(0, 0, 0, 0.55),
+    1px 2px 1px #000, 3px 6px 3px rgba(0, 0, 0, 0.7),
+    8px 16px 8px rgba(0, 0, 0, 0.5), 4px 8px 4px rgba(0, 0, 0, 0.6),
+    2px 4px 2px rgba(0, 0, 0, 0.8);
+
+  /* Title */
+  font-family: Play;
+  font-size: 80px;
 }
