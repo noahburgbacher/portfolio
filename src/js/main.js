@@ -136,3 +136,22 @@ window.addEventListener("resize", function () {
 //     }
 //   }
 // });
+
+// add a circle that follows the mouse
+const circle = document.createElement("div");
+circle.classList.add("cursor");
+document.body.appendChild(circle);
+document.addEventListener("mousemove", (e) => {
+  circle.style.left = e.pageX + "px";
+  circle.style.top = e.pageY + "px";
+});
+
+// when the esc key is pressed, redirect to the index page
+document.addEventListener("DOMContentLoaded", () => {
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape" || e.code === "Escape") {
+      e.preventDefault(); // Prevent default behavior if necessary
+      window.location.href = "./index.html"; // Ensure the URL is valid and relative
+    }
+  });
+});
