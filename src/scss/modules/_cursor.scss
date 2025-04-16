@@ -1,13 +1,16 @@
 .cursor {
-  height: 1200px;
-  width: 1200px;
+  height: 600px;
+  width: 600px;
   background: radial-gradient(
     circle,
-    rgb(255, 255, 255, 0.1) 0%,
+    rgba(255, 255, 255, 0.01) 0%,
     rgba(255, 255, 255, 0) 70%
   );
-  position: absolute;
+  position: fixed;
+  top: 0;
+  left: 0;
   pointer-events: none;
   transform: translate(-50%, -50%);
-  z-index: 100;
+  z-index: 500;
+  mix-blend-mode: hard-light;
 }

@@ -141,9 +141,12 @@ window.addEventListener("resize", function () {
 const circle = document.createElement("div");
 circle.classList.add("cursor");
 document.body.appendChild(circle);
+
 document.addEventListener("mousemove", (e) => {
-  circle.style.left = e.pageX + "px";
-  circle.style.top = e.pageY + "px";
+  const x = e.clientX; // Cursor position relative to the viewport
+  const y = e.clientY; // Cursor position relative to the viewport
+  circle.style.left = `${x}px`;
+  circle.style.top = `${y}px`;
 });
 
 // when the esc key is pressed, redirect to the index page
