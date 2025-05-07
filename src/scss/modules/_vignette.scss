@@ -1,0 +1,13 @@
+.vignette {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background-image: radial-gradient(
+    circle,
+    rgba(0, 0, 0, 0) 50%,
+    rgb(0, 0, 0) 125%
+  );
+  z-index: 1000;
+  pointer-events: none;
+  //   backdrop-filter: brightness(1.5);
+}
